@@ -21,8 +21,8 @@ const User : React.FC<UserProps> = ({details}) => {
         <div style={{ display: 'flex', flexDirection: 'row', gap: '10px', marginBottom: '10px' }}>
             <div>{details.id}</div>
             <div>{details.name}</div>
-            <div>{details.name}</div>
             <div>{details.address.city}</div>
+            <div>{details.username}</div>
             <div>{details.username}</div>
         </div>
     );
