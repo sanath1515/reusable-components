@@ -19,7 +19,7 @@ const User : React.FC<UserProps> = ({details}) => {
 
     return (
         <div style={{ display: 'flex', flexDirection: 'row', gap: '10px', marginBottom: '10px' }}>
-            <div>{details.id}</div>
+            <div style={{fontWeight:'bold'}}>{details.id}</div>
             <div>{details.name}</div>
             <div>{details.address.city}</div>
             <div>{details.username}</div>

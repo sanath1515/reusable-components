@@ -1,0 +1,36 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    name: Version or Publish
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🧾 Checkout code
+        uses: actions/checkout@v3
+
+      - name: 🧰 Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: https://registry.npmjs.org/
+          scope: '@sanath1515'
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🏗️ Build the package
+        run: npm run build
+
+      - name: 🚀 Version or Publish
+        uses: changesets/action@v1
+        with:
+          publish: npm publish --access public
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
