@@ -1,0 +1,40 @@
+# Build output
+dist/
+lib/
+
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Environment files (for local testing only)
+.env
+.env.local
+
+# Mac specific
+Icon?
+
+# Storybook (optional if you're using it)
+storybook-static/
+
+# Coverage reports
+coverage/
+
+.npmrc
+package-lock.json
